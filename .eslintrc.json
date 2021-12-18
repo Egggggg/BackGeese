@@ -1,0 +1,22 @@
+{
+	"env": {
+		"node": true,
+		"es2021": true
+	},
+	"extends": ["eslint:recommended", "prettier"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"indent": ["error", "tab", {"SwitchCase": 1}],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"prettier/prettier": ["error", { "useTabs": true }]
+	}
+}
