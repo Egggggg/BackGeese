@@ -20,8 +20,8 @@ export async function chooseSlug(value, db) {
 	const baseSlug = slugify(value);
 	let slug = baseSlug;
 
-	let snapshot = db.collection("geese").doc(slug);
-	let doc = await snapshot.get();
+	// ----- let snapshot = db.collection("geese").doc(slug);
+	// ----- let doc = await snapshot.get();
 
 	while (doc.exists) {
 		slug = baseSlug + "-";
@@ -30,8 +30,8 @@ export async function chooseSlug(value, db) {
 			slug += randomChar();
 		}
 
-		snapshot = db.collection("geese").doc(slug);
-		doc = await snapshot.get();
+		// ----- snapshot = db.collection("geese").doc(slug);
+		// ----- doc = await snapshot.get();
 	}
 
 	return slug;
